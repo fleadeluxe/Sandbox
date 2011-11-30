@@ -3,7 +3,7 @@
  *  Sandbox
  *
  *  Created by Jack Smith on 13/08/11.
- *  Copyright 2011 JackCorp. All rights reserved.
+ *  Copyright 2011 . All rights reserved.
  *
  */
 

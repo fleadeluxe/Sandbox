@@ -3,7 +3,7 @@
 //  Sandbox
 //
 //  Created by Jack Smith on 26/11/11.
-//  Copyright (c) 2011 Transmission Games. All rights reserved.
+//  Copyright (c) 2011. All rights reserved.
 //
 
 #ifndef Sandbox_KeyboardInputDevice_h
