@@ -17,14 +17,6 @@ CGameEntity::CGameEntity(const SEntityState& p_rInitialState)
 : m_State(p_rInitialState)
 {
     m_pRenderer = dynamic_cast<CRenderComponent*>(g_pSandbox->GetComponentFactory()->GetComponent(EComponentType_Renderer));
-    
-    m_Indices.push_back(0);
-    m_Indices.push_back(1);
-    m_Indices.push_back(3);
-    
-    m_Indices.push_back(1);
-    m_Indices.push_back(2);
-    m_Indices.push_back(3);
 }
 
 CGameEntity::~CGameEntity()

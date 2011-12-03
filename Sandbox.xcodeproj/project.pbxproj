@@ -14,6 +14,7 @@
 		04418A7913ED163000B759BC /* InputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04418A7813ED163000B759BC /* InputManager.cpp */; };
 		044CCFE013ED09970046472E /* Sandbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 044CCFDE13ED09970046472E /* Sandbox.cpp */; };
 		044CCFFD13ED0C5C0046472E /* RenderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 044CCFFB13ED0C5C0046472E /* RenderManager.cpp */; };
+		046B763A1489CDDC0066F142 /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 046B76391489CDDC0066F142 /* Logger.cpp */; };
 		046D0C0E1489ADA1005EED75 /* Paddle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 046D0C0D1489ADA0005EED75 /* Paddle.cpp */; };
 		048C0D9013ED767D00DC306E /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 048C0CB313ED767D00DC306E /* CMakeLists.txt */; };
 		048C0D9113ED767D00DC306E /* dummy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 048C0CB813ED767D00DC306E /* dummy.cpp */; };
@@ -156,6 +157,9 @@
 		044CCFDF13ED09970046472E /* Sandbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sandbox.h; sourceTree = "<group>"; };
 		044CCFFB13ED0C5C0046472E /* RenderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderManager.cpp; path = Graphics/RenderManager.cpp; sourceTree = "<group>"; };
 		044CCFFC13ED0C5C0046472E /* RenderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderManager.h; path = Graphics/RenderManager.h; sourceTree = "<group>"; };
+		046B76361489C7BC0066F142 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = Utility/Logger.h; sourceTree = "<group>"; };
+		046B76381489CC0F0066F142 /* LogTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogTypes.h; path = Utility/LogTypes.h; sourceTree = "<group>"; };
+		046B76391489CDDC0066F142 /* Logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Logger.cpp; path = Utility/Logger.cpp; sourceTree = "<group>"; };
 		046D0C0C1489AAC4005EED75 /* Paddle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Paddle.h; path = Entities/Paddle.h; sourceTree = "<group>"; };
 		046D0C0D1489ADA0005EED75 /* Paddle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Paddle.cpp; path = Entities/Paddle.cpp; sourceTree = "<group>"; };
 		048C0CB313ED767D00DC306E /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
@@ -427,6 +431,9 @@
 				04F2758714809EDD000DCC20 /* Profiler.h */,
 				04989B2213F651CA006BE56D /* Utilities.h */,
 				04989B4413F653E4006BE56D /* ProfilerHelper.h */,
+				046B76361489C7BC0066F142 /* Logger.h */,
+				046B76381489CC0F0066F142 /* LogTypes.h */,
+				046B76391489CDDC0066F142 /* Logger.cpp */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -449,10 +456,10 @@
 		044CCFA913ED05AE0046472E /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				04418A5613ED13F900B759BC /* includes.h */,
 				04F4CB14148118C4003D4C32 /* World */,
 				04F4CB0C14810320003D4C32 /* Components */,
 				04F2758C1480ADD6000DCC20 /* Entities */,
-				04418A5613ED13F900B759BC /* includes.h */,
 				041F85D513F3D8CC00393F33 /* Utility */,
 				04418A7613ED161C00B759BC /* Input */,
 				044CCFFA13ED0AB30046472E /* Graphics */,
@@ -1028,6 +1035,7 @@
 				04F4CB18148119A9003D4C32 /* World.cpp in Sources */,
 				04DDB61B14864AAA00FA049F /* KeyboardInputDevice.cpp in Sources */,
 				046D0C0E1489ADA1005EED75 /* Paddle.cpp in Sources */,
+				046B763A1489CDDC0066F142 /* Logger.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

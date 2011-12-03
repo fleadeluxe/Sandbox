@@ -17,7 +17,7 @@ class CGameEntity;
 class CWorld
 {
 public:
-    CWorld(int p_nWidth, int p_nHeight);
+    CWorld();
     ~CWorld();
     
     bool Initialise();
@@ -32,9 +32,6 @@ private:
     TEntities m_vEntities;
     
     bool m_bInitialised;
-    
-    int m_nWidth;
-    int m_nHeight;
 };
 
 #endif

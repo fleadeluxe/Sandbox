@@ -8,6 +8,7 @@
 
 #include "Utility/Utilities.h"
 #include "Utility/ProfilerHelper.h"
+#include "Utility/Logger.h"
 
 #include "Entities/GameEntity.h"
 
@@ -19,6 +20,7 @@
 #include <time.h>
 
 CSandbox* g_pSandbox = NULL;
+CLogger* g_pLogger = NULL;
 
 static int s_nWindowHeight = 640;
 static int s_nWindowWidth = 1024;
@@ -26,6 +28,8 @@ static int s_nWindowWidth = 1024;
 int main(int argc, char *argv[])
 {
     srand(time(NULL));
+    
+    g_pLogger = new CLogger("/Users/Jack/SandboxV2/SandboxLog.log");
     
 	g_pSandbox = new CSandbox();
 	
@@ -37,6 +41,8 @@ int main(int argc, char *argv[])
 	g_pSandbox->Deinitialise();
 	
 	delete g_pSandbox;
+    
+    delete g_pLogger;
 
     return 0;
 }
@@ -49,11 +55,10 @@ CSandbox::CSandbox()
 ,   m_pWorld(NULL)
 ,   m_pComponentFactory(NULL)
 {
-	
 }
 
 CSandbox::~CSandbox()
-{
+{    
 	if (m_bInitialised)
 	{
 		Deinitialise();
@@ -62,33 +67,44 @@ CSandbox::~CSandbox()
 
 bool CSandbox::Initialise()
 {	
+    LOG("Init SDL");
+    
 	if (SDL_Init(SDL_INIT_EVERYTHING) == -1)
 		return false;
 	
+    LOG("Create CRenderManager");
 	m_pRenderManager = new CRenderManager();
-	
+    
+    LOG("Init CRenderManager");
 	if (!m_pRenderManager->Initialise(s_nWindowWidth, s_nWindowHeight))
 		return false;
 	
+    LOG("Create CInputManager");
 	m_pInputManager = new CInputManager();
 	
+    LOG("Init CInputManager");
 	if (!m_pInputManager->Initialise(EInputDeviceType_Gamepad))
 		return false;
 	
-	m_pCamera = new CCamera(glm::vec3(0.0f, 0.0f, -5.0f));
+    LOG("Create CCamera");
+	m_pCamera = new CCamera(glm::vec3(0.0f, 0.0f, -200.0f));
     
+    LOG("Create CComponentFactor");
     m_pComponentFactory = new CComponentFactory();
     
-    m_pWorld = new CWorld(10, 10);
+    LOG("Create CWorld");
+    m_pWorld = new CWorld();
     
+    LOG("Init CWorld");
     m_pWorld->Initialise();
     
+    LOG("Init CComponentFactory");
     m_pComponentFactory->Initialise();
 	
 	m_pRenderManager->SetCamera(m_pCamera);
 
 	m_bInitialised = true;
-	
+    
 	return m_bInitialised;
 }
 
@@ -188,12 +204,6 @@ bool CSandbox::ShouldQuit(const SControllerState& p_rState) const
 {
 	if (SDL_QuitRequested())
 		return true;
-    
-    if ((p_rState.m_nButtons & CONTROLLER_START) != 0)
-    {
-        int i = 0;
-        i = 3;
-    }
 	
 	return ((p_rState.m_nButtons & CONTROLLER_START) != 0) && ((p_rState.m_nButtons & CONTROLLER_SELECT) != 0);
 }

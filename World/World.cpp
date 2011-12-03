@@ -16,10 +16,8 @@
 
 #define NUM_ENTITIES 20
 
-CWorld::CWorld(int p_nWidth, int p_nHeight)
-: m_nWidth(p_nWidth)
-, m_nHeight(p_nHeight)
-, m_bInitialised(false)
+CWorld::CWorld()
+: m_bInitialised(false)
 {
     
 }

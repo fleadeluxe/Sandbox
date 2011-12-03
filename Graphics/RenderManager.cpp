@@ -12,6 +12,8 @@
 #include "Camera.h"
 #include "../Components/RenderComponent.h"
 
+#include "Logger.h"
+
 const float g_fFOV = 60.0f; //Degrees
 const float g_fAspect = 1.3333f;
 const float g_fZNear = 1.0f;
@@ -30,6 +32,7 @@ CRenderManager::CRenderManager()
 
 bool CRenderManager::Initialise(int p_nWidth, int p_nHeight)
 {	
+    VLOG("New window. Width: %d Height: %d", p_nWidth, p_nHeight);
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 	SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 16);
 	
