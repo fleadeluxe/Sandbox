@@ -8,7 +8,7 @@
 
 #include "World.h"
 
-#include "../Entities/GameEntity.h"
+#include "../Entities/Paddle.h"
 
 #include "includes.h"
 
@@ -32,17 +32,7 @@ CWorld::~CWorld()
 
 bool CWorld::Initialise()
 {
-    for (int i = 0; i < NUM_ENTITIES; ++i)
-    {
-        SEntityState initialState;
-        initialState.vPos = glm::vec2(rand() % m_nWidth, rand() % m_nHeight);
-        initialState.vVel = glm::vec2(0.0f, 0.0f);
-        
-        m_vEntities.push_back(new CGameEntity(initialState, 5.0f));
-    }
-    
-    m_bInitialised = true;
-    
+    m_vEntities.push_back(new CPaddle(10.0f, 5.0f));
     return true;
 }
 

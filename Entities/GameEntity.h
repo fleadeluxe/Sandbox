@@ -20,6 +20,11 @@ class CRenderComponent;
 
 struct SEntityState
 {
+    SEntityState(glm::vec2 pos, glm::vec2 vel)
+    : vPos(pos)
+    , vVel(vel)
+    {}
+    
     glm::vec2 vPos;
     glm::vec2 vVel;
 };
@@ -27,24 +32,20 @@ struct SEntityState
 class CGameEntity
 {
 public:
-    CGameEntity(const SEntityState& p_rInitialState, float p_fMaxSpeed);
-    ~CGameEntity();
+    CGameEntity(const SEntityState& p_rInitialState);
+    virtual ~CGameEntity();
     
-    void Update(float p_fDelta, const SControllerState& p_rState);
-    void PreRender();
+    virtual void Update(float p_fDelta, const SControllerState& p_rState) = 0;
+    virtual void PreRender() = 0;
     
-private:
+protected:
     
     SEntityState    m_State;
-    float           m_fMaxSpeed;
     
     CRenderComponent* m_pRenderer;
     
     TVertices   m_Vertices;
     TIndices    m_Indices;
-    
-    float m_fWidth;
-    float m_fHeight;
 };
 
 #endif
