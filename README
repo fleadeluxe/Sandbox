@@ -1,1 +1,5 @@
 Hi!
+
+This is a codebase i'm developing as an area where I can try out new ideas, technologies and techniques that I find online.
+
+This is by no means a demo, just a system where I can explore different things that interest me from time to time. The code is written in Xcode 4, and uses SDL and OpenGLES. It shouldn't be much of an issue to make it compile in VS.
