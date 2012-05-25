@@ -34,7 +34,7 @@
 
 #define CONTROLLER_NAME_PS3 "PLAYSTATION(R)3 Controller"
 
-#define INT_16_MAX 32768.0f
+#define SIGNED_INT_16_MAX 32768.0f
 #define AXIS_DEADZONE 3276 //10% of max
 
 struct SControllerState

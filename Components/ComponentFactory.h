@@ -41,4 +41,9 @@ private:
     bool m_bInitialised;
 };
 
+#define REGISTER_COMPONENT(class, type)  \
+    dynamic_cast<class*>(g_pSandbox->GetComponentFactory()->GetComponent(type))
+#define UNREGISTER_COMPONENT(ptr)  \
+    g_pSandbox->GetComponentFactory()->ReleaseComponent(m_pRenderer)
+
 #endif

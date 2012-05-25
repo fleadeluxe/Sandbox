@@ -8,7 +8,7 @@
 
 #include "World.h"
 
-#include "../Entities/Paddle.h"
+#include "../Entities/TestEntity.h"
 
 #include "includes.h"
 
@@ -30,7 +30,7 @@ CWorld::~CWorld()
 
 bool CWorld::Initialise()
 {
-    m_vEntities.push_back(new CPaddle(10.0f, 5.0f));
+    m_vEntities.push_back(new CTestEntity(10.0f, 5.0f, g_zeroVec));
     return true;
 }
 

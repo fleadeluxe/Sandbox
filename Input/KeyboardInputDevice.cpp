@@ -38,34 +38,22 @@ void CKeyboardInputDevice::EnumerateKeys(SControllerState& p_rState)
                     nLeftXMod += -1;
                     break;
                 case SDLK_UP:
-                    nRightYMod += 1;
+                    p_rState.m_nButtons |= CONTROLLER_DPAD_UP;
                     break;
                 case SDLK_DOWN:
-                    nRightYMod += -1;
+                    p_rState.m_nButtons |=  CONTROLLER_DPAD_DOWN;
                     break;
                 case SDLK_RIGHT:
-                    nRightXMod += 1;
+                    p_rState.m_nButtons |= CONTROLLER_DPAD_RIGHT;
                     break;
                 case SDLK_LEFT:
-                    nRightXMod += -1;
+                    p_rState.m_nButtons |=  CONTROLLER_DPAD_LEFT;
                     break;
                 case SDLK_SPACE:
                     p_rState.m_nButtons |=  CONTROLLER_START;
                     break;
                 case SDLK_ESCAPE:
                     p_rState.m_nButtons |= CONTROLLER_SELECT;
-                    break;
-                case SDLK_k:
-                    p_rState.m_nButtons |=  CONTROLLER_DPAD_DOWN;
-                    break;
-                case SDLK_i:
-                    p_rState.m_nButtons |= CONTROLLER_DPAD_UP;
-                    break;
-                case SDLK_j:
-                    p_rState.m_nButtons |=  CONTROLLER_DPAD_LEFT;
-                    break;
-                case SDLK_l:
-                    p_rState.m_nButtons |= CONTROLLER_DPAD_RIGHT;
                     break;     
                 default:
                     break;

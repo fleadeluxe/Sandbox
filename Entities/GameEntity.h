@@ -17,32 +17,27 @@
 #include <vector>
 
 class CRenderComponent;
-
-struct SEntityState
-{
-    SEntityState(glm::vec2 pos, glm::vec2 vel)
-    : vPos(pos)
-    , vVel(vel)
-    {}
-    
-    glm::vec2 vPos;
-    glm::vec2 vVel;
-};
+class CPositionComponent;
 
 class CGameEntity
 {
 public:
-    CGameEntity(const SEntityState& p_rInitialState);
+    CGameEntity();
     virtual ~CGameEntity();
     
     virtual void Update(float p_fDelta, const SControllerState& p_rState) = 0;
     virtual void PreRender() = 0;
     
+    CPositionComponent* GetPositionComponent() const
+    {
+        assert(m_pPosition != NULL);
+        return m_pPosition;
+    }
+    
 protected:
     
-    SEntityState    m_State;
-    
     CRenderComponent* m_pRenderer;
+    CPositionComponent* m_pPosition;
     
     TVertices   m_Vertices;
     TIndices    m_Indices;

@@ -8,6 +8,7 @@
 
 #include "ComponentFactory.h"
 #include "RenderComponent.h"
+#include "PositionComponent.h"
 
 #include <algorithm>
 
@@ -59,7 +60,8 @@ CComponent* CComponentFactory::ConstructComponent(EComponentType p_eType)
     {
         case EComponentType_Renderer:
             return new CRenderComponent();
-            break;
+        case EComponentType_Position:
+            return new CPositionComponent();
         default:
             break;
     }

@@ -83,7 +83,7 @@ bool CSandbox::Initialise()
 	m_pInputManager = new CInputManager();
 	
     LOG("Init CInputManager");
-	if (!m_pInputManager->Initialise(EInputDeviceType_Gamepad))
+	if (!m_pInputManager->Initialise(EInputDeviceType_Keyboard))
 		return false;
 	
     LOG("Create CCamera");

@@ -50,7 +50,7 @@ void CGamepadInputDevice::EnumeratePS3Axes(SControllerState& p_rState)
 		
 		if (nAxisVal > AXIS_DEADZONE)
 		{
-			fStickVal = (float)((float)nAxisVal/INT_16_MAX) * nMod;
+			fStickVal = (float)((float)nAxisVal/SIGNED_INT_16_MAX) * nMod;
 		}
 	
 		switch((EPS3RawAxesIndex)(i))

@@ -11,6 +11,7 @@
 #define INCLUDES_H_INCLUDED
 
 //System
+#include <assert.h>
 #include <unistd.h>
 #include <iostream>
 
@@ -23,6 +24,8 @@
 //Math
 #include <glm.hpp>
 #include <type_ptr.hpp>
+
+static const glm::vec2 g_zeroVec = glm::vec2(0.0f, 0.0f);
 
 #define BUFFER_OFFSET(i) ((char *)NULL + (i))
 

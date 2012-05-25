@@ -53,11 +53,18 @@ bool CRenderManager::Initialise(int p_nWidth, int p_nHeight)
 	
 	glLoadIdentity ();
 	
+    //Perspective projection
+    /*
 	glm::mat4 projMatrix(0);
 	BuildProjectionMatrix(projMatrix, g_fFOV, g_fAspect, g_fZNear, g_fZFar);
 	
 	glLoadMatrixf(glm::value_ptr(projMatrix));
-	
+	*/
+    
+    glOrtho(0.0, (GLdouble)(p_nWidth), 
+            (GLdouble)(p_nHeight), 0.0, 
+            0.0, 1.0);
+    
 	glMatrixMode (GL_MODELVIEW);
 	
 	glEnable(GL_TEXTURE_2D);
@@ -145,8 +152,9 @@ void CRenderManager::Render(const TRenderComps& p_rComps)
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	
-	if (m_pCamera != NULL)
-		m_pCamera->SetView();
+    //Perspective projection
+	//if (m_pCamera != NULL)
+	//	m_pCamera->SetView();
         
     for (TRenderComps::const_iterator citer = p_rComps.begin(); citer != p_rComps.end(); ++citer)
     {

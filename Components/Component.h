@@ -9,11 +9,13 @@
 #ifndef Sandbox_Component_h
 #define Sandbox_Component_h
 
+#include "includes.h"
 #include "../Sandbox.h"
 
 enum EComponentType
 {
     EComponentType_Renderer = 0,
+    EComponentType_Position = 1,
     
     EComponentType_MAX
 };

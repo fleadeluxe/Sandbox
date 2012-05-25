@@ -15,7 +15,7 @@
 		044CCFE013ED09970046472E /* Sandbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 044CCFDE13ED09970046472E /* Sandbox.cpp */; };
 		044CCFFD13ED0C5C0046472E /* RenderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 044CCFFB13ED0C5C0046472E /* RenderManager.cpp */; };
 		046B763A1489CDDC0066F142 /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 046B76391489CDDC0066F142 /* Logger.cpp */; };
-		046D0C0E1489ADA1005EED75 /* Paddle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 046D0C0D1489ADA0005EED75 /* Paddle.cpp */; };
+		046D0C0E1489ADA1005EED75 /* TestEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 046D0C0D1489ADA0005EED75 /* TestEntity.cpp */; };
 		048C0D9013ED767D00DC306E /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 048C0CB313ED767D00DC306E /* CMakeLists.txt */; };
 		048C0D9113ED767D00DC306E /* dummy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 048C0CB813ED767D00DC306E /* dummy.cpp */; };
 		048C0D9213ED767D00DC306E /* func_common.inl in Resources */ = {isa = PBXBuildFile; fileRef = 048C0CBA13ED767D00DC306E /* func_common.inl */; };
@@ -120,6 +120,7 @@
 		048C0DF513ED767D00DC306E /* verbose_operator.inl in Resources */ = {isa = PBXBuildFile; fileRef = 048C0D8B13ED767D00DC306E /* verbose_operator.inl */; };
 		048C0DF613ED767D00DC306E /* wrap.inl in Resources */ = {isa = PBXBuildFile; fileRef = 048C0D8D13ED767D00DC306E /* wrap.inl */; };
 		04A6441613ED2C03009D82F2 /* GamepadInputDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04A6441513ED2C03009D82F2 /* GamepadInputDevice.cpp */; };
+		04B14452156D003A009A4C00 /* PositionComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04B14451156D003A009A4C00 /* PositionComponent.cpp */; };
 		04C705941480BD40001ADA76 /* GameEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C705931480BD40001ADA76 /* GameEntity.cpp */; };
 		04DDB61B14864AAA00FA049F /* KeyboardInputDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04DDB61914864AAA00FA049F /* KeyboardInputDevice.cpp */; };
 		04F2758814809EDD000DCC20 /* Profiler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04F2758614809EDD000DCC20 /* Profiler.cpp */; };
@@ -160,8 +161,8 @@
 		046B76361489C7BC0066F142 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = Utility/Logger.h; sourceTree = "<group>"; };
 		046B76381489CC0F0066F142 /* LogTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogTypes.h; path = Utility/LogTypes.h; sourceTree = "<group>"; };
 		046B76391489CDDC0066F142 /* Logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Logger.cpp; path = Utility/Logger.cpp; sourceTree = "<group>"; };
-		046D0C0C1489AAC4005EED75 /* Paddle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Paddle.h; path = Entities/Paddle.h; sourceTree = "<group>"; };
-		046D0C0D1489ADA0005EED75 /* Paddle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Paddle.cpp; path = Entities/Paddle.cpp; sourceTree = "<group>"; };
+		046D0C0C1489AAC4005EED75 /* TestEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestEntity.h; path = Entities/TestEntity.h; sourceTree = "<group>"; };
+		046D0C0D1489ADA0005EED75 /* TestEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestEntity.cpp; path = Entities/TestEntity.cpp; sourceTree = "<group>"; };
 		048C0CB313ED767D00DC306E /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		048C0CB513ED767D00DC306E /* _detail.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = _detail.hpp; sourceTree = "<group>"; };
 		048C0CB613ED767D00DC306E /* _fixes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = _fixes.hpp; sourceTree = "<group>"; };
@@ -385,6 +386,8 @@
 		04A6441313ED2B78009D82F2 /* InputDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputDevice.h; path = Input/InputDevice.h; sourceTree = "<group>"; };
 		04A6441413ED2C03009D82F2 /* GamepadInputDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamepadInputDevice.h; path = Input/GamepadInputDevice.h; sourceTree = "<group>"; };
 		04A6441513ED2C03009D82F2 /* GamepadInputDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GamepadInputDevice.cpp; path = Input/GamepadInputDevice.cpp; sourceTree = "<group>"; };
+		04B14450156CFD0D009A4C00 /* PositionComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionComponent.h; sourceTree = "<group>"; };
+		04B14451156D003A009A4C00 /* PositionComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PositionComponent.cpp; sourceTree = "<group>"; };
 		04C705901480AE1B001ADA76 /* GameEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameEntity.h; path = Entities/GameEntity.h; sourceTree = "<group>"; };
 		04C705931480BD40001ADA76 /* GameEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameEntity.cpp; path = Entities/GameEntity.cpp; sourceTree = "<group>"; };
 		04DDB61914864AAA00FA049F /* KeyboardInputDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KeyboardInputDevice.cpp; path = Input/KeyboardInputDevice.cpp; sourceTree = "<group>"; };
@@ -749,8 +752,8 @@
 			isa = PBXGroup;
 			children = (
 				04C705931480BD40001ADA76 /* GameEntity.cpp */,
-				046D0C0C1489AAC4005EED75 /* Paddle.h */,
-				046D0C0D1489ADA0005EED75 /* Paddle.cpp */,
+				046D0C0C1489AAC4005EED75 /* TestEntity.h */,
+				046D0C0D1489ADA0005EED75 /* TestEntity.cpp */,
 				04C705901480AE1B001ADA76 /* GameEntity.h */,
 			);
 			name = Entities;
@@ -764,6 +767,8 @@
 				04F4CB0F148107DC003D4C32 /* ComponentFactory.cpp */,
 				04F4CB1114810CBC003D4C32 /* RenderComponent.h */,
 				04F4CB1214810DEC003D4C32 /* RenderComponent.cpp */,
+				04B14450156CFD0D009A4C00 /* PositionComponent.h */,
+				04B14451156D003A009A4C00 /* PositionComponent.cpp */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1034,8 +1039,9 @@
 				04F4CB1314810DEC003D4C32 /* RenderComponent.cpp in Sources */,
 				04F4CB18148119A9003D4C32 /* World.cpp in Sources */,
 				04DDB61B14864AAA00FA049F /* KeyboardInputDevice.cpp in Sources */,
-				046D0C0E1489ADA1005EED75 /* Paddle.cpp in Sources */,
+				046D0C0E1489ADA1005EED75 /* TestEntity.cpp in Sources */,
 				046B763A1489CDDC0066F142 /* Logger.cpp in Sources */,
+				04B14452156D003A009A4C00 /* PositionComponent.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
