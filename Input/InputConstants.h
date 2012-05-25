@@ -37,6 +37,34 @@
 #define SIGNED_INT_16_MAX 32768.0f
 #define AXIS_DEADZONE 3276 //10% of max
 
+enum EButton
+{
+    EButton_Unknown = 0,
+    EButton_DPAD_Up = CONTROLLER_DPAD_UP,
+    EButton_DPAD_Down = CONTROLLER_DPAD_DOWN,
+    EButton_DPAD_Left = CONTROLLER_DPAD_LEFT,
+    EButton_DPAD_Right = CONTROLLER_DPAD_RIGHT,
+    
+    EButton_Start = CONTROLLER_START,
+    EButton_Select = CONTROLLER_SELECT,
+    
+    EButton_LeftTrigger = CONTROLLER_LEFT_TRIGGER,
+    EButton_RightTrigger = CONTROLLER_RIGHT_TRIGGER,
+    
+    EButton_LeftShoulder = CONTROLLER_LEFT_SHOULDER,
+    EButton_RightShoulder = CONTROLLER_RIGHT_SHOULDER,
+    
+    EButton_JoyClickLeft = CONTROLLER_JOY_CLICK_LEFT,
+    EButton_JoyClickRight = CONTROLLER_JOY_CLICK_RIGHT,
+    
+    EButton_ButtonBottom = CONTROLLER_BUTTON_BOTTOM,
+    EButton_ButtonRight = CONTROLLER_BUTTON_RIGHT,
+    EButton_ButtonLeft = CONTROLLER_BUTTON_LEFT,
+    EButton_ButtonTop = CONTROLLER_BUTTON_TOP,
+    
+    EButton_MAX
+};
+
 struct SControllerState
 {
 	Uint16	m_nButtons;

@@ -69,6 +69,9 @@ public:
     }
     
 private:
+    
+    void ClampToScreen();
+
     glm::vec2   m_vPos;
     glm::vec2   m_vVel;
     glm::vec2   m_vAccel;

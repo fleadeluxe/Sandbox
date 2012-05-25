@@ -64,6 +64,11 @@ const SControllerState& CInputManager::GetState() const
 	return m_LastControllerState;
 }
 
+bool CInputManager::IsButtonDown(EButton p_eButton, const SControllerState& p_rState) const
+{
+    return (p_rState.m_nButtons & p_eButton) != 0;
+}
+
 void CInputManager::Update(float fElapsed)
 {
 	if (m_pInputDevice == NULL)

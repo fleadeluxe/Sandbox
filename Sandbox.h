@@ -36,6 +36,11 @@ public:
     {
         return m_pRenderManager;
     }
+    
+    CInputManager* GetInputManager() const
+    {
+        return m_pInputManager;
+    }
 	
 private:
 	

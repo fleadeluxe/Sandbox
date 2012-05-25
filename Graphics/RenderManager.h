@@ -35,6 +35,8 @@ public:
 	
     typedef std::vector<CComponent*> TRenderComps;
 	void Render(const TRenderComps& p_rComps);
+    
+    const glm::vec2& GetScreenSize() const;
 	
 private:
 	
@@ -50,8 +52,7 @@ private:
     typedef std::vector<SRenderBatch*> TRenderBatches;
     TRenderBatches  m_vBatches;
     
-	int m_nWindowWidth;
-	int m_nWindowHeight;
+    glm::vec2       m_vScreenSize;
 };
 
 #endif //RENDER_MANAGER_H_INCLUDED

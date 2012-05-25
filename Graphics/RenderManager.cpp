@@ -24,8 +24,7 @@ const float g_fPIOver360 = M_PI/360.0f;
 CRenderManager::CRenderManager()
 :	m_pDrawContext(NULL)
 ,	m_pCamera(NULL)
-,	m_nWindowWidth(0)
-,	m_nWindowHeight(0)
+,	m_vScreenSize(g_zeroVec)
 {
 
 }
@@ -40,14 +39,14 @@ bool CRenderManager::Initialise(int p_nWidth, int p_nHeight)
 															  SDL_GL_DOUBLEBUFFER | 
 															  SDL_HWSURFACE);
 	
-	m_nWindowWidth = p_nWidth;
-	m_nWindowHeight = p_nHeight;
+	m_vScreenSize.x = p_nWidth;
+    m_vScreenSize.y = p_nHeight;
 	
 	glClearColor(0, 0, 0, 0);
 	
 	glClearDepth(1.0f);
 	
-	glViewport(0, 0, m_nWindowWidth, m_nWindowHeight);
+	glViewport(0, 0, p_nWidth, p_nHeight);
 	
 	glMatrixMode (GL_PROJECTION);
 	
@@ -74,6 +73,11 @@ bool CRenderManager::Initialise(int p_nWidth, int p_nHeight)
 	glLoadIdentity();
 	
 	return true;
+}
+
+const glm::vec2& CRenderManager::GetScreenSize() const
+{
+    return m_vScreenSize;
 }
 
 void CRenderManager::SetCamera(CCamera* p_pCamera)

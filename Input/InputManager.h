@@ -25,6 +25,8 @@ public:
 	void Update(float fElapsed);
 	
 	const SControllerState& GetState() const;
+    
+    bool IsButtonDown(EButton p_eButton, const SControllerState& p_rState) const;
 	
 private:
 	

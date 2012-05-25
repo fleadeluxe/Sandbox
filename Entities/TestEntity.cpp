@@ -16,7 +16,7 @@ static const float g_paddleSpeed = 500.0f;
 static const float g_paddleSpeedMin = g_paddleSpeed * -1.0f;
 
 CTestEntity::CTestEntity(int nWidth, int nHeight,
-                 const glm::vec2& vStartPos)
+                         const glm::vec2& vStartPos)
 : CGameEntity()
 , m_nWidth(nWidth)
 , m_nHeight(nHeight)
